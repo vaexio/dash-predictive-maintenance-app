@@ -1,0 +1,7 @@
+vaex-core
+vaex-hdf5
+vaex-ml
+shap
+tensorflow
+dash
+dash_daq
