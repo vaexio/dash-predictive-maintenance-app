@@ -1,0 +1,213 @@
+{
+  "transformer": {
+    "method_name": "add_virtual_column",
+    "name": null,
+    "args": [
+      "minmax_scaled_W32",
+      "feat_W32"
+    ],
+    "kwargs": {},
+    "previous": {
+      "method_name": "add_virtual_column",
+      "name": null,
+      "args": [
+        "minmax_scaled_W31",
+        "feat_W31"
+      ],
+      "kwargs": {},
+      "previous": {
+        "method_name": "add_virtual_column",
+        "name": null,
+        "args": [
+          "minmax_scaled_htBleed",
+          "feat_htBleed"
+        ],
+        "kwargs": {},
+        "previous": {
+          "method_name": "add_virtual_column",
+          "name": null,
+          "args": [
+            "minmax_scaled_BPR",
+            "feat_BPR"
+          ],
+          "kwargs": {},
+          "previous": {
+            "method_name": "add_virtual_column",
+            "name": null,
+            "args": [
+              "minmax_scaled_NRf",
+              "feat_NRf"
+            ],
+            "kwargs": {},
+            "previous": {
+              "method_name": "add_virtual_column",
+              "name": null,
+              "args": [
+                "minmax_scaled_phi",
+                "feat_phi"
+              ],
+              "kwargs": {},
+              "previous": {
+                "method_name": "add_virtual_column",
+                "name": null,
+                "args": [
+                  "minmax_scaled_Ps30",
+                  "feat_Ps30"
+                ],
+                "kwargs": {},
+                "previous": {
+                  "method_name": "add_virtual_column",
+                  "name": null,
+                  "args": [
+                    "minmax_scaled_Nc",
+                    "feat_Nc"
+                  ],
+                  "kwargs": {},
+                  "previous": {
+                    "method_name": "add_virtual_column",
+                    "name": null,
+                    "args": [
+                      "minmax_scaled_Nf",
+                      "feat_Nf"
+                    ],
+                    "kwargs": {},
+                    "previous": {
+                      "method_name": "add_virtual_column",
+                      "name": null,
+                      "args": [
+                        "minmax_scaled_P30",
+                        "feat_P30"
+                      ],
+                      "kwargs": {},
+                      "previous": {
+                        "method_name": "add_virtual_column",
+                        "name": null,
+                        "args": [
+                          "minmax_scaled_T50",
+                          "feat_T50"
+                        ],
+                        "kwargs": {},
+                        "previous": {
+                          "method_name": "add_virtual_column",
+                          "name": null,
+                          "args": [
+                            "minmax_scaled_T30",
+                            "feat_T30"
+                          ],
+                          "kwargs": {},
+                          "previous": {
+                            "method_name": "add_virtual_column",
+                            "name": null,
+                            "args": [
+                              "minmax_scaled_T24",
+                              "feat_T24"
+                            ],
+                            "kwargs": {},
+                            "previous": {
+                              "state": {
+                                "cls": "vaex.ml.transformations.MinMaxScaler",
+                                "state": {
+                                  "feature_range": [
+                                    0,
+                                    1
+                                  ],
+                                  "features": [
+                                    "T24",
+                                    "T30",
+                                    "T50",
+                                    "P30",
+                                    "Nf",
+                                    "Nc",
+                                    "Ps30",
+                                    "phi",
+                                    "NRf",
+                                    "BPR",
+                                    "htBleed",
+                                    "W31",
+                                    "W32"
+                                  ],
+                                  "fmax_": [
+                                    644.53,
+                                    1616.91,
+                                    1441.49,
+                                    556.06,
+                                    2388.56,
+                                    9244.59,
+                                    48.53,
+                                    523.38,
+                                    2388.56,
+                                    8.5848,
+                                    400.0,
+                                    39.43,
+                                    23.6184
+                                  ],
+                                  "fmin_": [
+                                    641.21,
+                                    1571.04,
+                                    1382.25,
+                                    549.85,
+                                    2387.9,
+                                    9021.73,
+                                    46.85,
+                                    518.69,
+                                    2387.88,
+                                    8.3249,
+                                    388.0,
+                                    38.14,
+                                    22.9071
+                                  ],
+                                  "prefix": "feat_"
+                                }
+                              },
+                              "previous": {
+                                "method_name": "drop",
+                                "name": null,
+                                "args": [],
+                                "kwargs": {
+                                  "columns": [
+                                    "NRc",
+                                    "Nf_dmd",
+                                    "P15",
+                                    "P2",
+                                    "PCNfR_dmd",
+                                    "T2",
+                                    "epr",
+                                    "farB",
+                                    "setting_1",
+                                    "setting_2",
+                                    "setting_3"
+                                  ]
+                                },
+                                "previous": null,
+                                "transformer-type": "method"
+                              },
+                              "transformer-type": "ml"
+                            },
+                            "transformer-type": "method"
+                          },
+                          "transformer-type": "method"
+                        },
+                        "transformer-type": "method"
+                      },
+                      "transformer-type": "method"
+                    },
+                    "transformer-type": "method"
+                  },
+                  "transformer-type": "method"
+                },
+                "transformer-type": "method"
+              },
+              "transformer-type": "method"
+            },
+            "transformer-type": "method"
+          },
+          "transformer-type": "method"
+        },
+        "transformer-type": "method"
+      },
+      "transformer-type": "method"
+    },
+    "transformer-type": "method"
+  },
+  "blobs": {}
+}

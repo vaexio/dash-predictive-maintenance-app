@@ -35,7 +35,7 @@ logging.basicConfig(level=logging.INFO,
 # Load all of the data
 # #################################
 
-df_test_trans, df_test_final, explainer, df_airplane = load_data_sources()
+df_test_expl, df_test_trans, df_test_final, explainer, df_airplane = load_data_sources()
 # These are the features for the Keras model (scaled, shifted features)
 features = df_test_trans.get_column_names(regex='^feat')
 
@@ -136,7 +136,7 @@ def compute_feature_importances(shap_values):
 def compute_sensor_data(engine_number, sensor, shap_values, scaled=True):
     index = sensor_names_short.index(sensor)
 
-    df_tmp = df_test_trans[df_test_trans.unit_number == engine_number]
+    df_tmp = df_test_expl[df_test_expl.unit_number == engine_number]
     x = np.arange(df_tmp.shape[0]) + 0.5
     if scaled:
         sensor = f'minmax_scaled_{sensor}'
@@ -147,10 +147,7 @@ def compute_sensor_data(engine_number, sensor, shap_values, scaled=True):
 
     # For the full range
     n_cycles = x.shape[0]
-    if n_cycles >= 50:
-        w = np.concatenate((np.zeros(n_cycles - 50), w))
-    else:
-        w = w[-n_cycles:]
+    w = np.concatenate((np.zeros(n_cycles - 50), w))
 
     return x, y, w
 

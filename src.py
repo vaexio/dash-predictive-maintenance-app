@@ -42,23 +42,25 @@ def r2_keras(y_true, y_pred):
 
 
 def load_data_sources():
+    # Read the partially transformed test data for providing explanations
+    df_test_expl = vaex.open('./data/df_test_expl.hdf5')
     # Read the fully transformed test data - on a per sequence basis
     df_test_trans = vaex.open('./data/df_test_trans.hdf5')
     # Read the final prediction data - on a per engine basis
     df_test_final = vaex.open('./data/df_test_final.hdf5')
 
     # Load the custom keras model
-    model_path = './models/rul_model.hdf5'
+    model_path = './model/rul_model.hdf5'
     nn_model = K.models.load_model(model_path, custom_objects={'r2_keras': r2_keras})
 
     # Load the background data for the Shap explainer
-    bg_seq_array = np.load('./models/bg_seq_array_data.npy')
+    bg_seq_array = np.load('./model/bg_seq_array_data.npy')
     explainer = shap.GradientExplainer(model=nn_model, data=bg_seq_array)
 
     # For illustration purposes create a fake airplane by randomly pairing two engines.
     df_airplane = create_airplane(df_engine=df_test_final)
 
-    return df_test_trans, df_test_final, explainer, df_airplane
+    return df_test_expl, df_test_trans, df_test_final, explainer, df_airplane
 
 
 def create_airplane(df_engine):
