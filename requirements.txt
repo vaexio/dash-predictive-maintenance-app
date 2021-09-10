@@ -1,6 +1,6 @@
-vaex-core
-vaex-hdf5
-vaex-ml
+vaex-core>=5.0.0-alpha.1
+vaex-hdf5>=1.0.0-alpha.1
+vaex-ml>=1.0.0-alpha.1
 shap
 tensorflow
 dash
