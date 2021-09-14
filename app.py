@@ -192,7 +192,16 @@ x_init, y_init, w_init = compute_sensor_data(engine_number=engine_number_init, s
 about_md = '''
 ### Vaex and Dash: Predictive maintenance
 
-A better description is coming soon.
+An example of an interactive dashboard which shows when a fault is expected to
+occur in a group of jet engines. The data is preprocessed with
+[Vaex](https://github.com/vaexio/vaex/), which is also used to create a complete
+ML pipeline. The model itself is built with [Keras](https://keras.io/), and
+[SHAP](https://github.com/slundberg/shap) is used to offer some insight and
+interpretability of the model results.
+All of it is put together via [Dash](https://plotly.com/dash/).
+
+Check out this [GitHub repo](...) which contans the source code of this dashboard as well as the
+model creation notebooks.
 '''
 
 # Additional settings
