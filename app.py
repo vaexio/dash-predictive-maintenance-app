@@ -200,8 +200,8 @@ ML pipeline. The model itself is built with [Keras](https://keras.io/), and
 interpretability of the model results.
 All of it is put together via [Dash](https://plotly.com/dash/).
 
-Check out this [GitHub repo](...) which contans the source code of this dashboard as well as the
-model creation notebooks.
+Check out this [GitHub repo](https://github.com/vaexio/dash-predictive-maintenance-app)
+which contans the source code of this dashboard as well as the model creation notebooks.
 '''
 
 # Additional settings
